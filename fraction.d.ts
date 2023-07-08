@@ -14,7 +14,7 @@ type FractionConstructor = {
   (firstValue: Fraction | number | string | [number | string, number | string] | NumeratorDenominator, secondValue?: number): Fraction;
 };
 
-export default class Fraction {
+export class Fraction {
   constructor (fraction: Fraction);
   constructor (num: number | string);
   constructor (numerator: number, denominator: number);

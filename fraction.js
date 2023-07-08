@@ -36,8 +36,7 @@
  * f.mul([-4, 3]).div(4.9);
  *
  */
-
-(function(root) {
+export const Fraction = (function() {
 
   "use strict";
 
@@ -875,17 +874,6 @@
     }
   };
 
-  if (typeof define === "function" && define["amd"]) {
-    define([], function() {
-      return Fraction;
-    });
-  } else if (typeof exports === "object") {
-    Object.defineProperty(Fraction, "__esModule", { 'value': true });
-    Fraction['default'] = Fraction;
-    Fraction['Fraction'] = Fraction;
-    module['exports'] = Fraction;
-  } else {
-    root['Fraction'] = Fraction;
-  }
+  return Fraction;
+})();
 
-})(this);
